@@ -1,0 +1,134 @@
+.attribution { font-size: 11px; text-align: center; color: white;}
+.attribution a { color: hsl(228, 28%, 55%); text-decoration: underline;}
+.attribution a:hover{ cursor: pointer;}
+body, html{
+    min-height: 100%;
+    overflow: auto;
+}
+body{
+    background-color: hsl(233, 47%, 7%);
+    font-family: 'inter';
+    padding-bottom: 50px;
+    height: 100vh;
+    padding-top: 50px;
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    background-color: hsl(244, 38%, 16%);
+    margin: 1.5rem;
+    height: fit-content;
+    border-radius: 0.5rem;
+    max-width: 327px;
+    display: flex;
+    flex-direction: column;
+}
+.meeting-img .dummy-img{
+    visibility: hidden;
+    display: block; /* Removing the gap on the bottom caused by the default display */
+}
+.meeting-img .dummy-img-2{
+    display: none;
+}
+.meeting-img{
+    background-image: url(images/image-header-mobile.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: hsl(277, 64%, 61%);
+    background-blend-mode: multiply;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.content{
+    text-align: center;
+    padding: 2rem;
+}
+header{
+    color: hsl(0, 0%, 100%);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+header span{
+    color: hsl(277, 64%, 61%);
+}
+.subtitle{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+.stats{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.stats section{
+    
+}
+.stats h1{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 0.3rem;
+}
+.stats p{
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 15px;
+    letter-spacing: 0.1rem;
+}
+
+@media only screen and (width >= 1150px){
+    .wrapper{
+        align-items: center;
+    }
+    .card{
+        flex-direction: row-reverse;
+        max-width: 1500px;
+        height: fit-content;
+    }
+    .content{
+        min-height: 100%;
+        padding: 4rem;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    header{
+        font-size: 35px;
+        text-align: left;
+    }
+    .subtitle{
+        text-align: left;
+    }
+    .meeting-img .dummy-img{
+        display: none;
+    }
+    .meeting-img{
+        width: fit-content;
+        height: fit-content;
+    }
+    .meeting-img .dummy-img-2{
+        display: block;
+        width: 500px;
+        visibility: hidden;
+    }
+    .meeting-img{
+        background-image: url(images/image-header-desktop.jpg);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    .stats{
+        flex-direction: row;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+    }
+}
